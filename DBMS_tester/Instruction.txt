@@ -1,0 +1,13 @@
+Command to run :    1.  gcc teacher.c department.c IMT2022009_pds.c bst.c pds_tester.c
+                    2.  ./a.out test.in
+
+How to add instruction in test file : 1. CREATE repo_name link_repo_name expected_status(0,1)
+                                      2. OPEN repo_name link_repo_name expected_status
+                                      3. STORE repo_name parent_id expected_status
+                                      4. STORE link_repo_name child_id expected_status
+                                      5. NDX_SEARCH repo_name parent_id expected_status
+                                      6. NDX_SEARCH link_repo_name child_id expected_status
+                                      7. NON_NDX_SEARCH repo_name data expected_status(-1,1,2,3.....)
+                                      8. LINK parent_id child_id expected_status
+                                      9. GETLINK parent_id expected_child expected_status [input id's of expected_child]
+                                      10. NDX_DELETE parent_id expected_status

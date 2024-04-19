@@ -1,0 +1,13 @@
+CREATE teacher department 0
+LINK 1 101 1
+OPEN teacher department 0
+STORE teacher 101 0
+STORE teacher 101 1
+LINK 101 501 1
+GETLINK 101 0 0
+STORE department 501 0
+LINK 101 501 0
+GETLINK 101 1 1 502
+GETLINK 101 0 1
+GETLINK 101 1 0 501
+CLOSE 0

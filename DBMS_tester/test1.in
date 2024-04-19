@@ -1,0 +1,28 @@
+CREATE teacher department 0
+OPEN teacher department 0
+STORE teacher 101 0
+STORE teacher 102 0
+STORE department 500 0
+STORE teacher 103 0
+STORE teacher 102 1
+NDX_SEARCH teacher 102 0
+STORE department 501 0
+STORE department 502 0
+CLOSE 0
+OPEN teacher department 0
+NDX_SEARCH department 502 0
+NDX_SEARCH teacher 101 0
+NON_NDX_SEARCH Phone-of-102 2 
+NDX_DELETE 103 0
+NDX_SEARCH teacher 103 1
+NON_NDX_SEARCH Phone-of-103 -1 
+LINK 102 501 0
+LINK 102 502 0
+LINK 101 500 0
+CLOSE 0
+OPEN teacher department 0
+NON_NDX_SEARCH Phone-of-104 -1
+GETLINK 101 1 0 500
+GETLINK 102 2 0 501 502
+GETLINK 102 1 1 500
+CLOSE 0
