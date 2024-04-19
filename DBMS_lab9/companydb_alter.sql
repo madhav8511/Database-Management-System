@@ -1,0 +1,13 @@
+alter table EMPLOYEE add constraint pk_Ssn PRIMARY KEY (Ssn);
+alter table EMPLOYEE add constraint fk_Super_ssn FOREIGN KEY (Super_ssn) REFERENCES EMPLOYEE(Ssn);
+alter table EMPLOYEE add constraint fk_Dno FOREIGN KEY (Dno) REFERENCES DEPARTMENT(dnumber);
+alter table DEPARTMENT add constraint fk_mgr FOREIGN KEY (mgr_ssn) REFERENCES EMPLOYEE (Ssn);
+alter table DEPT_LOCATION add constraint pk_dlocnum PRIMARY KEY (dnumber,dlocation);
+alter table DEPT_LOCATION add constraint fk_dnumber FOREIGN KEY (dnumber) REFERENCES DEPARTMENT (dnumber);
+alter table PROJECT add constraint pk_pnumber PRIMARY KEY (pnumber);
+alter table PROJECT add constraint fk_dnum FOREIGN KEY (dnum) REFERENCES DEPARTMENT (dnumber);
+alter table WORKS_ON add constraint pk_EsPn PRIMARY KEY (Essn,Pno);
+alter table WORKS_ON add constraint fk_pno FOREIGN KEY (Pno) REFERENCES PROJECT (pnumber);
+alter table WORKS_ON add constraint fk_Essn_Works FOREIGN KEY (Essn) REFERENCES EMPLOYEE (Ssn);
+alter table DEPENDENT add constraint pk_EsDn PRIMARY KEY (Essn,Dependent_name);
+alter table DEPENDENT add constraint fk_essn FOREIGN KEY (Essn) REFERENCES EMPLOYEE (Ssn);
