@@ -23,7 +23,7 @@ public class JdbcTransactionDemo {
 
    //  Database credentials
    static final String USER = "root";
-   static final String PASS = "Girdhar@123";
+   static final String PASS = "password";
 
    
    public static void main(String[] args) {
